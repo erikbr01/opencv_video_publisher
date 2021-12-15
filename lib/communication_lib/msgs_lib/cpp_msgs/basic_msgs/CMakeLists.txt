@@ -1,0 +1,14 @@
+
+add_library(basic_msgs_lib INTERFACE)
+
+target_link_libraries(basic_msgs_lib INTERFACE
+std_msgs_lib
+geometry_msgs_lib
+actuator_msgs_lib
+sensor_msgs_lib
+)
+
+add_subdirectory(std_msgs)
+add_subdirectory(geometry_msgs)
+add_subdirectory(actuator_msgs)
+add_subdirectory(sensor_msgs)

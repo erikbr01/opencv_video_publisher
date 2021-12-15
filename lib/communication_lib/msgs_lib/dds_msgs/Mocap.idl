@@ -1,0 +1,17 @@
+#pragma once
+
+#include "Header.idl"
+#include "Pose.idl"
+
+module idl_msg{
+
+struct Mocap {
+
+  Header header;
+
+  Pose pose;
+
+  float latency;
+};
+
+};

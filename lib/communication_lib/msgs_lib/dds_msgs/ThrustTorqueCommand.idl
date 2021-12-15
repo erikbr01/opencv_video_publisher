@@ -1,0 +1,16 @@
+#pragma once
+#include "Header.idl"
+
+module idl_msg{
+
+struct ThrustTorqueCommand {
+
+  Header header;
+
+  float thrust;
+  float roll_torque;
+  float pitch_torque;
+  float yaw_torque;
+};
+
+};

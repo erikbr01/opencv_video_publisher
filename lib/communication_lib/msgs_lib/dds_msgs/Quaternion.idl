@@ -1,0 +1,14 @@
+#pragma once
+
+module idl_msg{
+
+struct Quaternion {
+
+  float x;
+  float y;
+  float z;
+
+  float w;
+};
+
+};

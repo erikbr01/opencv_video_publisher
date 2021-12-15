@@ -1,0 +1,22 @@
+
+#ifndef __offboard_control_mode__idl__
+#define __offboard_control_mode__idl__
+
+
+
+
+
+struct offboard_control_mode
+{
+    unsigned long long timestamp_;
+    boolean position_;
+    boolean velocity_;
+    boolean acceleration_;
+    boolean attitude_;
+    boolean body_rate_;
+
+}; // struct offboard_control_mode
+
+#pragma keylist offboard_control_mode
+
+#endif  // __offboard_control_mode__idl__

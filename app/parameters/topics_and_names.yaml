@@ -1,0 +1,2 @@
+objects: ["aruco_marker_relative_pos"] #object names (the same as the ViCon names)
+topic_prefix: "mocap_" #name of the i-th topic will be "topic_prefix + objects[i]""

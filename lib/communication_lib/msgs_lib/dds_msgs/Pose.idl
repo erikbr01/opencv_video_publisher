@@ -1,0 +1,21 @@
+#pragma once
+
+#include "EulerAngleZYX.idl"
+#include "Header.idl"
+#include "Position.idl"
+#include "Quaternion.idl"
+
+module idl_msg{
+
+struct Pose {
+
+  Header header;
+
+  Position position;
+
+  EulerAngleZYX orientation_euler;
+
+  Quaternion orientation_quat;
+};
+
+};

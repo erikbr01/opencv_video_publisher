@@ -1,0 +1,13 @@
+#pragma once
+#include "Header.idl"
+
+module idl_msg{
+  
+struct QuadMotorCommand {
+
+  Header header;
+
+  float motorspeed[4];
+};
+
+};

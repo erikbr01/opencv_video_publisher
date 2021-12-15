@@ -1,0 +1,17 @@
+#pragma once
+
+#include "Position.idl"
+#include "Header.idl"
+
+module idl_msg{
+
+struct QuadPositionCmd {
+
+  Header header;
+
+  Position position;
+
+  float yaw_angle;
+};
+
+};

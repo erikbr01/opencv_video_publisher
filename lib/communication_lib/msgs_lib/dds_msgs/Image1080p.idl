@@ -1,0 +1,14 @@
+#pragma once
+#include "Header.idl"
+
+
+module idl_msg{
+
+struct Image1080p {
+
+  Header header;
+
+  octet frame[1920*1080*3];
+};
+
+};

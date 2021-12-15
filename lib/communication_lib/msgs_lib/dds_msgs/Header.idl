@@ -1,0 +1,11 @@
+#pragma once
+
+module idl_msg{
+
+struct Header {
+
+  long timestamp;
+  string id;
+};
+
+};

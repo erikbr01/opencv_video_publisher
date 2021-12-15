@@ -1,0 +1,10 @@
+#pragma once
+
+module idl_msg{
+
+struct MotorSpeed {
+
+  float motor_speed;
+};
+
+};

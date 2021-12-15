@@ -1,0 +1,17 @@
+#pragma once
+
+#include "Velocity.idl"
+#include "Header.idl"
+
+module idl_msg{
+
+struct QuadVelocityCmd {
+
+  Header header;
+
+  Velocity velocity;
+
+  float yaw_rate;
+};
+
+};
