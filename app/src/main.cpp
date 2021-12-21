@@ -16,7 +16,7 @@
 #include "large_data_participant.h"
 #include "paths.h"
 #include "sensor_msgs/msgs/Mocap.h"
-#include "set_parameters.h"
+
 
 #include "Image720pPubSubTypes.h"
 #include "sensor_msgs/msgs/Image720p.h"
