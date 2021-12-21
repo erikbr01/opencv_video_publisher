@@ -48,7 +48,7 @@ bool VideoPublisher ::init() {
     return false;
   }
 
-  std::cout << "Position DataWriter created." << std::endl;
+  std::cout << "Video publisher created." << std::endl;
   return true;
 
   // Set Best effort QOS for datawriter

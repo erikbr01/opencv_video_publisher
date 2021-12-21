@@ -7,7 +7,7 @@ struct Image720p {
 
   Header header;
 
-  uint8_t frame[1920 * 1080 * 3];
+  uint8_t frame[1280 * 720 * 3];
 
   // Array size = rows * columns * channels in image
 };
