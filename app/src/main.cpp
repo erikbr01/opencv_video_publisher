@@ -23,30 +23,24 @@ int main(int argc, char *argv[]) {
 
   img_pub.init();
 
-  cout << "success init" << endl;
-
-  cout << "entering monitor" << endl;
-
   idl_msg::Image720p img_msg;
 
   img_msg.header().id() = "Webcam video feed";
 
   Mat frame;
 
-  cout << "vidcap" << endl;
-
   VideoCapture vid(1);
 
   if (!vid.isOpened()) {
     return -1;
   }
-  namedWindow("Webcam", WINDOW_AUTOSIZE);
+  //   namedWindow("Webcam", WINDOW_AUTOSIZE);
 
   while (true) {
     if (!vid.read(frame))
       break;
 
-    imshow("Webcam", frame);
+    // imshow("Webcam", frame);
 
     if (waitKey(30) >= 0)
       break;
@@ -56,13 +50,8 @@ int main(int argc, char *argv[]) {
     // This should correspond to 1280*720*3 -> check for current attached webcam
     uint length = frame.total() * frame.channels();
 
-    // copy frame to array
-    uchar *image_arr = frame.isContinuous() ? frame.data : frame.clone().data;
-
-    // transfer to image message
-    for (int i = 0; i < length; i++) {
-      img_msg.frame()[i] = image_arr[i];
-    }
+    // Copy frame to image message
+    memcpy(img_msg.frame().data(), frame.data, length);
 
     // this stops the webcam preview
     img_pub.publish(img_msg);
